@@ -1,0 +1,146 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    display: none;
+    flex-wrap: wrap;
+  }
+}
+
+header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-right: 20px;
+    .logo-text {
+      text-align: center;
+      vertical-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .search-bar {
+    display: grid;
+    width: 450px;
+    grid-template-columns: 2fr 1fr;
+    height: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr minmax(30px, max-content);
+      grid-template-rows: 30px;
+      input[type="text"] {
+        border-style: none;
+      }
+      input[type="button"] {
+        border-style: none;
+        font-size: 15px;
+        border-right: 1px solid gray;
+        padding: 5px;
+        background-color: transparent;
+        &:hover {
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .rank-viewer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    p {
+      font-size: 12px;
+      padding: 2px;
+      margin: 0px;
+    }
+    .rank-tag {
+      font-weight: bolder;
+      padding: 2px;
+    }
+  }
+
+  .util-menu-list {
+    display: flex;
+    margin-left: 10px;
+    .menu {
+      border: 1px solid black;
+      padding: 10px;
+      margin-left: 5px;
+    }
+  }
+
+  .user-menu-list {
+    margin-left: 30px;
+    align-self: flex-start;
+    a {
+      font-size: 12px;
+      font-weight: bolder;
+      &:not(:last-child) {
+        &::after {
+          content: "|";
+          color: gray;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  position: relative;
+  bottom: -1px;
+  margin-top: 30px;
+  ul {
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    grid-template-rows: max-content;
+    grid-row-gap: 5px;
+    justify-content: stretch;
+    list-style-type: none;
+    li {
+      border: 1px solid black;
+      border-collapse: separate;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      padding: 8px 5px;
+      text-align: center;
+      &:hover,
+      &.select {
+        border-bottom: 1px solid white;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+.section-content {
+  border-top: 1px solid black;
+}
