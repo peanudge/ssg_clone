@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/styles.css" />
+    <script src="dist/js/main.js" ></script>
+    <script src="https://kit.fontawesome.com/3b8424c68a.js" crossorigin="anonymous"></script>
     <title>(S)CSS Masterclass</title>
   </head>
   <body>
@@ -13,8 +15,28 @@
       </div>
       <div class="search-bar">
         <form>
-          <input type="text" placeholder="검색어를 입력하세요."/>
-          <input type="button" value="검색"/>
+          <input type="text" placeholder="검색어를 입력하세요." onfocus="openRecentKeyword()" onfocusout="closeRecentKeyword()"/>
+          <button>
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="recent-list">
+            <p class="title">최근 검색어</p>
+            <ul>
+              <li class="recent-item">
+                <p>남자청바지</p>
+                <div class="delete-btn"><i class="fas fa-times"></i></div>
+              </li>
+              <li class="recent-item">
+                <p>남자청바지</p>
+                <div class="delete-btn"><i class="fas fa-times"></i></div>
+              </li>
+              <li class="recent-item">
+                <p>남자청바지</p>
+                <div class="delete-btn"><i class="fas fa-times"></i></div>
+              </li>
+            </ul>
+            <div class="keyword-remove-btn">검색어 전체 삭제</div>
+          </div>
         </form>
         <div class="rank-viewer">
           <p>1. 제품 이름</p>
@@ -23,13 +45,16 @@
       </div>
       <div class="util-menu-list">
         <div class="cart menu">
-          장바구니
+          <i class="fas fa-shopping-cart fa-1x"></i>
+          <p>장바구니</p>
         </div>
         <div class="delivery menu">
-          배송조회
+          <i class="fas fa-truck"></i>
+          <p>배송조회</p>
         </div>
         <div class="my menu">
-          My SSG
+          <i class="fas fa-user-alt"></i>
+          <p>My SSG</p>
         </div>
       </div>
       <div class="user-menu-list">
