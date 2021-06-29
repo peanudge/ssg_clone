@@ -14,7 +14,7 @@
         <a class="logo-text">SSG.COM</a>
       </div>
       <div class="search-bar">
-        <form>
+        <form class="search-container">
           <input type="text" placeholder="검색어를 입력하세요." onfocus="openRecentKeyword()" onfocusout="closeRecentKeyword()"/>
           <button>
             <i class="fas fa-search"></i>
@@ -27,11 +27,11 @@
                 <div class="delete-btn"><i class="fas fa-times"></i></div>
               </li>
               <li class="recent-item">
-                <p>남자청바지</p>
+                <p>티셔츠</p>
                 <div class="delete-btn"><i class="fas fa-times"></i></div>
               </li>
               <li class="recent-item">
-                <p>남자청바지</p>
+                <p>청소기</p>
                 <div class="delete-btn"><i class="fas fa-times"></i></div>
               </li>
             </ul>
@@ -39,8 +39,59 @@
           </div>
         </form>
         <div class="rank-viewer">
-          <p>1. 제품 이름</p>
-          <span class="rank-tag">new</span>
+          <div class="rank-item"> 
+            <p>1. 제품 이름</p>
+            <span class="rank-tag">new</span>
+          </div>
+         
+          <div class="rank-detail-viewer">
+            <p class="title">급상승 검색어</p>
+            <p class="datetime">2021-07-01</p>
+            <div class="rank-toggle-container">
+              <div class="rank-toggle select">1~10위</div>
+              <div class="rank-toggle">11~20위</div>
+            </div>
+            <ul class="rank-item-list">
+              <li class="rank-item">
+                <span class="order">1. </span>
+                <p class="name"> 토마토</p>
+                <span class="rank-tag">new</span>
+              </li>
+              <li class="rank-item">
+                <span class="order">2. </span>
+                <p class="name"> 사과</p>
+                <span class="rank-tag down-tag">
+                  <i class="fas fa-arrow-down"></i>
+                  <span>2</span>
+                </span>
+              </li>
+              <li class="rank-item">
+                <span class="order">3. </span>
+                <p class="name">컴퓨터</p>
+                <span class="rank-tag up-tag">
+                  <i class="fas fa-arrow-up"></i>
+                  <span>10</span>
+                </span>
+              </li>
+              <li class="rank-item">
+                <span class="order">4. </span>
+                <p class="name"> 사과</p>
+                <span class="rank-tag down-tag">
+                  <i class="fas fa-arrow-down"></i>
+                  <span>2</span>
+                </span>
+              </li>
+              <li class="rank-item">
+                <span class="order">5. </span>
+                <p class="name"> 다이슨 드라이기</p>
+                <span class="rank-tag up-tag">
+                  <i class="fas fa-arrow-up"></i>
+                  <span>456</span>
+                </span>
+              </li>
+            </ul>
+
+          </div>
         </div>
       </div>
       <div class="util-menu-list">
