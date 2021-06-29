@@ -216,14 +216,36 @@ header {
 
   .util-menu-list {
     display: flex;
-    margin-left: 10px;
-    .menu {
+    .menu-item {
+      position: relative;
       text-align: center;
-      margin-left: 5px;
+      padding: 3px;
+
       p {
         font-size: 10px;
         margin: 0px;
         margin-top: 2px;
+      }
+    }
+
+    .cart {
+      &:hover {
+        .quick-cart-viewer {
+          visibility: visible;
+        }
+        background-color: #c0c0c0;
+      }
+
+      .quick-cart-viewer {
+        visibility: hidden;
+        position: absolute;
+        left: -5px;
+        top: 100%;
+        min-width: 150px;
+        border: 1px solid black;
+        z-index: 99;
+        padding: 10px;
+        font-size: 15px;
       }
     }
   }
