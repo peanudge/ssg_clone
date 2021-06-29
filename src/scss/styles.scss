@@ -301,6 +301,149 @@ nav {
     }
   }
 }
-.section-content {
+
+// STARTBUCKS MAIN VIEW
+section {
   border-top: 1px solid black;
+}
+
+.startbucks-container {
+  margin-top: 20px;
+
+  .startbucks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    .logo {
+      display: flex;
+      align-items: center;
+      img {
+        width: 75px;
+        height: 75px;
+      }
+      h1 {
+        font-weight: bold;
+        color: #0a472c;
+        font-size: 25px;
+      }
+    }
+
+    .search-container {
+      border: 1px solid #c0c0c0;
+      padding: 5px;
+      min-width: 150px;
+      border-radius: 20px;
+      input[type="text"] {
+        border-style: none;
+      }
+      button {
+        border-style: none;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.starbucks-navigation {
+  height: 50px;
+  width: 100%;
+  background-color: #182c25;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+    height: 100%;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: white;
+      font-weight: bold;
+      flex-basis: 150px;
+    }
+  }
+}
+
+.starbucks-main-banner {
+  position: relative;
+  overflow: scroll;
+
+  .slide-bg {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+    background-color: #0b5132;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    width: calc(100% * 4);
+    animation: slide 8s infinite;
+    li.slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: calc(100% / 4);
+      .banner-comment {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        color: white;
+        width: 500px;
+        height: 250px;
+      }
+    }
+  }
+
+  .banner-paginator {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 25%;
+    bottom: 25%;
+  }
+}
+
+.starbucks-sub-1-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+  justify-content: center;
+  align-items: center;
+  .sub-banner-bg {
+    position: absolute;
+    top: -100px;
+    z-index: -1;
+  }
+  .sub-banner-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tags {
+      color: #c0c0c0;
+    }
+  }
+  .sub-banner-items {
+    display: flex;
+
+    justify-content: center;
+    .item {
+      margin-right: 50px;
+      img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+  }
 }
