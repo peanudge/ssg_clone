@@ -430,19 +430,38 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
     .tags {
       color: #c0c0c0;
     }
   }
   .sub-banner-items {
     display: flex;
-
+    align-items: flex-start;
     justify-content: center;
     .item {
       margin-right: 50px;
       img {
         width: 290px;
         height: 290px;
+      }
+      .item-description {
+        display: flex;
+        flex-direction: column;
+        .provider-name {
+          font-weight: bold;
+          margin-top: 2px;
+        }
+        .production-name {
+          margin-top: 2px;
+        }
+        .cost {
+          font-size: 20px;
+          margin-top: 2px;
+          .unit {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
